@@ -45,6 +45,9 @@ TagManager:
   - name: Flower
     uniqueID: 2250772219
     locked: 0
+  - name: Skeleton
+    uniqueID: 283337443
+    locked: 0
   - name: Player
     uniqueID: 2323769349
     locked: 0

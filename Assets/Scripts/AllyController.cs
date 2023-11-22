@@ -19,6 +19,7 @@ public class AllyController : MonoBehaviour
     private void OnMouseClick()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = transform.position.z;
         allymovement.MoveTo(mousePosition);
     }
 }

@@ -1017,5 +1017,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonAlly
       objectReference: {fileID: 0}
+    - target: {fileID: 1447764526207955567, guid: e07048876ba7700418a89f0d22c4ea78, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447764526207955567, guid: e07048876ba7700418a89f0d22c4ea78, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 283337443
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145534726980902141, guid: e07048876ba7700418a89f0d22c4ea78, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07048876ba7700418a89f0d22c4ea78, type: 3}
