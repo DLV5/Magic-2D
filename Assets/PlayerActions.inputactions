@@ -6,6 +6,15 @@
             "id": "6f67f81b-c389-4c48-85e7-fa221a28f944",
             "actions": [
                 {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "41edab1e-5496-4432-8097-99f7eba57b51",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Movement",
                     "type": "Value",
                     "id": "ec921409-4e1d-43ed-bece-320f0e19dc8d",
@@ -16,6 +25,28 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "22c3aa76-193a-46b8-bdf3-c09ef3e91424",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8875a257-0cb0-46ac-b03d-37bd9601e1ae",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "WASD Keys",
                     "id": "755fbe2d-eb25-4637-83eb-38c327a0f87c",
@@ -91,8 +122,13 @@
             "bindingGroup": "Keyboard",
             "devices": [
                 {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
                     "devicePath": "<Keyboard>",
-                    "isOptional": false,
+                    "isOptional": true,
                     "isOR": false
                 }
             ]

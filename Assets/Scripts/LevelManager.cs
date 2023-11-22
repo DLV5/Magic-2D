@@ -1,13 +1,18 @@
+using Cinemachine;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header("Camera Settings")]
+    [SerializeField] private CinemachineVirtualCamera camera;
+
     [Header("Player Settings")]
-    [SerializeField] private GameObject _playerSpawnPoint;
-    [SerializeField] private GameObject _playerPrefab;
+    [SerializeField] private GameObject playerSpawnPoint;
+    [SerializeField] private GameObject playerPrefab;
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(_playerPrefab, _playerSpawnPoint.transform.position, Quaternion.identity);
+        GameObject player = Instantiate(playerPrefab, playerSpawnPoint.transform.position, Quaternion.identity);
+        camera.Follow = player.transform;
     }
 }

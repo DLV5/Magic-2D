@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4540942122086578850}
   - component: {fileID: 9143025195043658636}
   - component: {fileID: 4886917888668605102}
+  - component: {fileID: 3238419920908114510}
   - component: {fileID: 2226532851787333031}
   - component: {fileID: 580994363877564215}
   - component: {fileID: 1774754714744963166}
@@ -50,8 +51,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 4886917888668605102}
-  _smoothSpeed: 1
-  _playerInput: {fileID: 580994363877564215}
+  playerAnimations: {fileID: 3238419920908114510}
+  playerInput: {fileID: 580994363877564215}
 --- !u!114 &4886917888668605102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +66,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 2226532851787333031}
-  movementSpeed: 3
+  movementSpeed: 5
+--- !u!114 &3238419920908114510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4540942122086578853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3b5cabe786a1c4094bc32d15bf00fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1774754714744963166}
 --- !u!50 &2226532851787333031
 Rigidbody2D:
   serializedVersion: 4
@@ -85,7 +99,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &580994363877564215
 MonoBehaviour:
@@ -128,8 +142,24 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ec921409-4e1d-43ed-bece-320f0e19dc8d
     m_ActionName: PlayerControls/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9143025195043658636}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 41edab1e-5496-4432-8097-99f7eba57b51
+    m_ActionName: PlayerControls/Click[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -223,8 +253,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1971197947
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f06d17ca0d2eb824ca806e774a7b2226, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

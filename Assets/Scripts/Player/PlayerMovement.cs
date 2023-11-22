@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // I will write private components without "SerializeField"
+    // just like public ones, without this "_" symbol
     [Header("Component References")]
     public Rigidbody2D playerRigidbody;
 
@@ -22,9 +22,11 @@ public class PlayerMovement : MonoBehaviour
         MoveThePlayer();
     }
 
+
+    //I am using Velocity instead of MovePosition cause I need more raw movement here
     private void MoveThePlayer()
     {
-        Vector2 movement = movementSpeed * Time.deltaTime * _movementDirection;
-        playerRigidbody.MovePosition(transform.position + (Vector3)movement);
+        Vector2 movement = movementSpeed * _movementDirection;
+        playerRigidbody.velocity = movement;
     }
 }
