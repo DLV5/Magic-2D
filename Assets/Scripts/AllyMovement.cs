@@ -4,7 +4,16 @@ using UnityEngine.UIElements;
 
 public class AllyMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    /// <summary>
+    /// Defines how fast ally will reach desired position
+    /// </summary>
+    [SerializeField] private float followSpeed;
+
+    //I will do it later, it is not that important for now (23.11.2023)
+    ///// <summary>
+    ///// Defines speed for idle state, when ally just wondering around
+    ///// </summary>
+    //[SerializeField] private float idleSpeed;
 
     private Vector3 _positionToMove;
     private bool _isMoving = false;
@@ -22,7 +31,7 @@ public class AllyMovement : MonoBehaviour
     {
         if (_isMoving)
         {
-            transform.position = Vector2.MoveTowards(transform.position, _positionToMove, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, _positionToMove, followSpeed * Time.deltaTime);
         }
     }
 }

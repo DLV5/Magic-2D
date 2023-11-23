@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1447764525841609084}
   - component: {fileID: 3294819494820772809}
   - component: {fileID: 2145534726980902141}
-  - component: {fileID: 3427189292844238303}
   m_Layer: 0
   m_Name: SkeletonAlly
   m_TagString: Untagged
@@ -60,27 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bc2e945aa5f744ab2b0ac8d3577b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
---- !u!95 &3427189292844238303
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447764525841609087}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f9e4513e8257b854189f0815d9794739, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  followSpeed: 1
 --- !u!1 &1447764526207955566
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447764526207955564}
   - component: {fileID: 1447764526207955567}
+  - component: {fileID: 8221564861444760732}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -165,3 +145,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8221564861444760732
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447764526207955566}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e00ee30a7c1560f448eae68c5554d490, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
